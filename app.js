@@ -13,13 +13,14 @@ searchUser.addEventListener('keyup',(e)=>{
     if(userName!==''){
         github.getUserProfile(userName)
         .then(data => {
-            if(data.message === 'Not Found'){
+            if(data.userProfile.message === 'Not Found'){
                 ui.showAlert('User not found','alert alert-danger d-flex justify-content-center');
             
             }else{
                 // show the profile inforamtion
                 //console.log(data);
-                ui.displayUserProfile(data);
+                ui.displayUserProfile(data.userProfile);
+                ui.displayUserRepos(data.userRepos);
             }
             
         });

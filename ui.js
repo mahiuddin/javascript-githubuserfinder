@@ -1,6 +1,7 @@
 class UI{
     constructor(){
         this.showProfile=document.getElementById('showProfile');
+        //this.repos=document.getElementById('repos');
     }
 
     displayUserProfile(userProfile){
@@ -30,11 +31,36 @@ class UI{
                         
         </div>
         <div class="container d-flex justify-content-center">
-        <h3 class='page-heading mp-3'>Latest Repos </h3>
-        <div ip="repos"</div>
+         <h3 class='page-heading mp-3'> Latest Repos </h3>
         </div>
+        <div id="repos" class="container justify-content-center"></div>
+        
         
         `;
+    }
+
+    displayUserRepos(userRepos){
+        let output ='';
+        console.log(userRepos);
+        userRepos.forEach(repo => {
+            output +=`
+            <div class='card card-body mt-2'>
+               <div class='row'>
+                   <div class='col-md-6'>
+                      <a href='' src='${repo.html_url}'>${repo.name}</a>
+                   </div>
+                   <div class='col-md-6'>
+                      <span class='badge badge-primary'>Stargazers : ${repo.stargazers_count}</span>
+                      <span class='badge badge-secondary'>Watchers : ${repo.watchers_count}</span>
+                      <span class='badge badge-success'>Forks : ${repo.forms_count}</span>
+                      <span class='badge badge-success'>Language : ${repo.language}</span>
+                   </div>
+               </div>
+            </div>
+            `;
+        });
+        document.getElementById('repos').innerHTML=output;
+        // console.log(output);   
     }
    
     clearAlert(){
