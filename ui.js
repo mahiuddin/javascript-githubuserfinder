@@ -41,7 +41,6 @@ class UI{
 
     displayUserRepos(userRepos){
         let output ='';
-        console.log(userRepos);
         userRepos.forEach(repo => {
             output +=`
             <div class='card card-body mt-2'>
@@ -95,39 +94,5 @@ class UI{
             this.clearAlert();
         }, 3000);
 
-
     }
 }
-
-
-// {/* <div>login: "m"
-                // id: 48685
-                // node_id: "MDQ6VXNlcjQ4Njg1"
-                // avatar_url: "https://avatars0.githubusercontent.com/u/48685?v=4"
-                // gravatar_id: ""
-                // url: "https://api.github.com/users/m"
-                // html_url: "https://github.com/m"
-                // followers_url: "https://api.github.com/users/m/followers"
-                // following_url: "https://api.github.com/users/m/following{/other_user}"
-                // gists_url: "https://api.github.com/users/m/gists{/gist_id}"
-                // starred_url: "https://api.github.com/users/m/starred{/owner}{/repo}"
-                // subscriptions_url: "https://api.github.com/users/m/subscriptions"
-                // organizations_url: "https://api.github.com/users/m/orgs"
-                // repos_url: "https://api.github.com/users/m/repos"
-                // events_url: "https://api.github.com/users/m/events{/privacy}"
-                // received_events_url: "https://api.github.com/users/m/received_events"
-                // type: "User"
-                // site_admin: false
-                // name: "Matt Mullenweg"
-                // company: "Automattic / WordPress"
-                // blog: "http://ma.tt/"
-                // location: "San Francisco"
-                // email: null
-                // hireable: null
-                // bio: null
-                // public_repos: 4
-                // public_gists: 3
-                // followers: 862
-                // following: 0
-                // created_at: "2009-01-23T03:29:58Z"
-                // // updated_at: "2020-03-25T04:08:50Z"</div> */}
